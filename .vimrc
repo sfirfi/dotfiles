@@ -17,6 +17,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-latex/vim-latex'
 " Plugins end
 call vundle#end()
 filetype plugin indent on
@@ -30,14 +31,18 @@ au BufNewFile,BufRead *.py set
 			\ tabstop=4
 			\ softtabstop=4
 			\ shiftwidth=4
-			\ textwidth=79
 			\ expandtab
 			\ fileformat=unix
 " js, css, html indentation
-au BufNewFile,BufRead *.js, *.html, *.cs set
+au BufNewFile,BufRead *.{js,html,cs} set
 			\ tabstop=4
 			\ softtabstop=4
 			\ shiftwidth=4
+			\ expandtab
+au BufNewFile,BufRead *.json set 
+			\ tabstop=2
+			\ softtabstop=2
+			\ shiftwidth=2
 			\ expandtab
 
 syntax on
@@ -52,6 +57,7 @@ else
 endif
 set smartindent
 set autoindent
+set listchars=eol:$,tab:<-,space:~
 let g:airline_theme='luna'
 let g:airline_solarized_bg='dark'
 map <F5> mzgg=G`z
