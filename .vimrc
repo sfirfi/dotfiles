@@ -18,6 +18,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-latex/vim-latex'
+Plugin 'fatih/vim-go'
 " Plugins end
 call vundle#end()
 filetype plugin indent on
